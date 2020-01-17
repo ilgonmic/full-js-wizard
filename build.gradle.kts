@@ -23,6 +23,7 @@ dependencies {
     implementation(npm("react-is", "16.12.0"))
     implementation(npm("styled-components", "5.0.0"))
     implementation(npm("inline-style-prefixer", "5.1.0"))
+    implementation(npm("svg-inline-loader", "0.8.0"))
 
     testImplementation(kotlin("test-js"))
 }
