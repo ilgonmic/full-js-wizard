@@ -16,13 +16,15 @@ val Ticker: FunctionalComponent<TickerProps> = functionalComponent<TickerProps> 
     val (count, setCount) = useState(props.startFrom)
 
     useEffectWithCleanup(listOf(secondsElapsed)) {
-        val timerID = window.setInterval(
-            {
-                setSecondsElapsed(secondsElapsed + 1)
-            }, 1000
-        );
+        var timerId: Int
+        fun timeoutCallback() {
+            timerId = window.setTimeout(::timeoutCallback)
+            setSecondsElapsed(secondsElapsed + 1)
+        }
 
-        { window.clearInterval(timerID) }
+        timerId = window.setTimeout(::timeoutCallback, 1000)
+
+        return@useEffectWithCleanup { window.clearInterval(timerId) }
     }
 
     div {
