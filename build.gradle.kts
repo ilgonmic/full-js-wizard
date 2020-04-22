@@ -1,6 +1,6 @@
 plugins {
-    kotlin("js") version "1.3.71"
-    kotlin("plugin.serialization") version "1.3.71"
+    kotlin("js") version "1.3.72"
+    kotlin("plugin.serialization") version "1.3.72"
 }
 
 group = "org.example"
@@ -13,14 +13,14 @@ repositories {
     maven(url = "https://kotlin.bintray.com/kotlinx") //necessary for kotlinx-html
 }
 
-val kotlinJsWrappersPrefix = "pre.94-kotlin-1.3.70"
+val kotlinJsWrappersPrefix = "pre.102-kotlin-1.3.72"
 
 dependencies {
     implementation(kotlin("stdlib-js"))
     implementation("org.jetbrains.kotlinx", "kotlinx-serialization-runtime-js", "0.20.0")
-    implementation("org.jetbrains", "kotlin-react", "16.13.0-$kotlinJsWrappersPrefix")
-    implementation("org.jetbrains", "kotlin-react-dom", "16.13.0-$kotlinJsWrappersPrefix")
-    implementation("org.jetbrains", "kotlin-styled", "1.0.0-$kotlinJsWrappersPrefix")
+    implementation("org.jetbrains", "kotlin-react", "16.13.1-$kotlinJsWrappersPrefix")
+    implementation("org.jetbrains", "kotlin-extensions", "1.0.1-$kotlinJsWrappersPrefix")
+    implementation("org.jetbrains", "kotlin-react-dom", "16.13.1-$kotlinJsWrappersPrefix")
     implementation(npm("react", "16.13.0"))
     implementation(npm("react-dom", "16.13.0"))
     implementation(npm("styled-components", "5.0.0"))

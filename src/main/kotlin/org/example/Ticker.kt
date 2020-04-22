@@ -1,6 +1,6 @@
 package org.example
 
-import kotlinx.html.js.onClickFunction
+//import kotlinx.html.js.onClickFunction
 import react.*
 import react.dom.button
 import react.dom.div
@@ -33,7 +33,7 @@ val Ticker: FunctionalComponent<TickerProps> = functionalComponent<TickerProps> 
         }
         button {
             attrs {
-                onClickFunction = { setCount(count + 1) }
+//                onClickFunction = { setCount(count + 1) }
             }
             +"Hey $count"
         }
